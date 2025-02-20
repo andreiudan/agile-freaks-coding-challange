@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.10.35013.160
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AgileFreaksCodingChallange", "AgileFreaksCodingChallange\AgileFreaksCodingChallange.csproj", "{F6ECFF34-02DE-45E7-8E81-EF7DD1A7A93E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F6ECFF34-02DE-45E7-8E81-EF7DD1A7A93E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F6ECFF34-02DE-45E7-8E81-EF7DD1A7A93E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F6ECFF34-02DE-45E7-8E81-EF7DD1A7A93E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F6ECFF34-02DE-45E7-8E81-EF7DD1A7A93E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {74B45F98-1E5A-43BE-B6FB-E87E1A827A0E}
+	EndGlobalSection
+EndGlobal
