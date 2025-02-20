@@ -34,16 +34,8 @@ namespace AgileFreaksCodingChallange
 
             coffeeShops = await ReadFromCSV(basePath + userInputURL);
 
-            //foreach (var pair in coffeeShops)
-            //{
-            //    Console.WriteLine(pair.Name + "  " + pair.CoordX.ToString() + "  " + pair.CoordY.ToString());
-            //}
-
             FindClosestCoffeeShops();
-            foreach (var pair in closestCoffeeShops)
-            {
-                Console.WriteLine(pair.Key + "  " + pair.Value.ToString());
-            }
+            DisplayClosestCoffeeShops();
         }
 
         private static void Initialize()
@@ -51,6 +43,14 @@ namespace AgileFreaksCodingChallange
             for(int i = 0; i < closestCoffeeShops.Length; i++)
             {
                 closestCoffeeShops[i] = KeyValuePair.Create(string.Empty, double.MaxValue);
+            }
+        }
+
+        public static void DisplayClosestCoffeeShops()
+        {
+            foreach(var coffeeShop in closestCoffeeShops)
+            {
+                Console.WriteLine($"{coffeeShop.Key},{Double.Round(coffeeShop.Value, 4)}");
             }
         }
 
