@@ -48,6 +48,8 @@ namespace AgileFreaksCodingChallange
 
         public static void DisplayClosestCoffeeShops()
         {
+            Console.WriteLine();
+
             foreach(var coffeeShop in closestCoffeeShops)
             {
                 Console.WriteLine($"{coffeeShop.Key},{Double.Round(coffeeShop.Value, 4)}");
@@ -85,7 +87,7 @@ namespace AgileFreaksCodingChallange
         public static bool ReadUserInput()
         {
             Console.WriteLine("Insert the coordinate X, the coordinate Y and the shop data url separated by spaces.");
-            Console.WriteLine("Insert '0' if you don't want to insert any data.");
+            Console.WriteLine("Insert '0' if you want to stop the application.");
 
             while (true) 
             {
@@ -100,7 +102,7 @@ namespace AgileFreaksCodingChallange
 
                     if (userInput.Equals("0"))
                     {
-                        return false;
+                        Environment.Exit(0);
                     }
 
                     string[] userInputs = userInput.Split(' ');
@@ -136,6 +138,17 @@ namespace AgileFreaksCodingChallange
             {
                 HasHeaderRecord = false,
                 Delimiter = ",",
+                BadDataFound = context =>
+                {
+                    Console.WriteLine("Malformed data found inside the CSV!");
+                    Environment.Exit(1);
+                },
+                ReadingExceptionOccurred = exception =>
+                {
+                    Console.WriteLine("Error reading CSV!");
+                    Environment.Exit(1);
+                    return false;
+                },
             };
 
             using HttpClient httpClient = new HttpClient();
